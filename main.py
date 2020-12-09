@@ -72,7 +72,7 @@ def main():
     if not texts_dir.exists():
         texts_dir.mkdir()
 
-    images = Path(f'{current_directory}/images').rglob('*.jpeg')
+    images = sorted (Path(f'{current_directory}/images').rglob('*.jpeg'))
     for image in images:
 
         # Get data
